@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: dragon-cloud-gateway
+  cloud:
+    nacos:
+      # 核心：配置指向你的自定义主端口
+      server-addr: us.rocc.uno:9001
+  config:
+    import:
+      - nacos:database.yaml?refreshEnabled=true
