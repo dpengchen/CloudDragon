@@ -1,0 +1,6 @@
+spring:
+  nacos:
+    server-addr: us.rocc.uno:9001
+  config:
+    import:
+    - nacos:dragon-cloud-gateway.yaml?refreshEnable=true
