@@ -4,4 +4,4 @@ spring:
       server-addr: us.rocc.uno:9002
   config:
     import:
-    - nacos:dragon-cloud-gateway.yaml?refreshEnable=true
+    - nacos:dragon-cloud-system.yaml?refreshEnable=true

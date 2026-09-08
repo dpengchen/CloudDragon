@@ -5,14 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>uno.rocc.dragon.cloud</groupId>
-        <artifactId>dragon-cloud</artifactId>
+        <artifactId>dragon-cloud-modules</artifactId>
         <version>${dragon-cloud.version}</version>
     </parent>
 
     <groupId>uno.rocc.dragon.cloud</groupId>
-    <artifactId>dragon-cloud-modules</artifactId>
+    <artifactId>dragon-cloud-system</artifactId>
     <version>${dragon-cloud.version}</version>
-    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -20,10 +19,12 @@
     </properties>
 
     <dependencies>
-        <!-- spring web -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>uno.rocc.dragon.cloud</groupId>
+            <artifactId>dragon-cloud-system-api</artifactId>
+            <version>${dragon-cloud.version}</version>
         </dependency>
     </dependencies>
+
+
 </project>
