@@ -124,18 +124,18 @@
           <view class="bg-white rounded-[48rpx] p-[32rpx] shadow-[0_10rpx_36rpx_rgba(27,27,29,0.03)]">
             <!-- 设备主头部 -->
             <view class="flex justify-between items-center mb-[28rpx]">
-              <view class="flex items-center gap-[20rpx]">
+              <view class="flex items-center gap-[20rpx] flex-1 min-w-0 mr-[16rpx]">
                 <view class="w-[88rpx] h-[88rpx] rounded-[32rpx] bg-[#FFDBC9]/50 flex items-center justify-center shrink-0">
                   <image class="w-[44rpx] h-[38rpx]" src="/static/images/device-box-icon.png" mode="aspectFit" />
                 </view>
-                <view class="flex flex-col gap-[8rpx]">
+                <view class="flex flex-col gap-[8rpx] flex-1 min-w-0">
                   <view class="flex items-center gap-[12rpx]">
-                    <text class="text-[32rpx] font-bold text-[#1B1B1D]">麦麦的数字灵犀盒</text>
-                    <view class="flex items-center justify-center h-[36rpx] bg-[#FFEAD9] px-[14rpx] rounded-[8rpx]">
+                    <text class="text-[32rpx] font-bold text-[#1B1B1D] truncate">麦麦的数字灵犀盒</text>
+                    <view class="flex items-center justify-center h-[36rpx] bg-[#FFEAD9] px-[14rpx] rounded-[8rpx] shrink-0">
                       <text class="text-[20rpx] font-semibold text-[#994703]">Pro版</text>
                     </view>
                   </view>
-                  <text class="text-[22rpx] text-[#554339]">唤醒词「麦麦」· 实时全息渲染</text>
+                  <text class="text-[22rpx] text-[#554339] truncate block">唤醒词「麦麦」· 实时全息渲染</text>
                 </view>
               </view>
               <view class="flex items-center justify-center h-[46rpx] bg-[#D7F2EE] px-[20rpx] rounded-full gap-[10rpx] shrink-0">
@@ -147,43 +147,43 @@
             <!-- 规格属性 2x2 网格 (包含各自专属Icon) -->
             <view class="grid grid-cols-2 gap-[16rpx]">
               <!-- 格 1: 连接状态 -->
-              <view class="bg-[#FAFAFA] rounded-[28rpx] py-[22rpx] px-[20rpx] flex items-center gap-[16rpx]">
+              <view class="bg-[#FAFAFA] rounded-[28rpx] py-[22rpx] px-[20rpx] flex items-center gap-[16rpx] min-w-0">
                 <view class="w-[44rpx] h-[44rpx] flex items-center justify-center shrink-0">
                   <image class="w-[36rpx] h-[36rpx]" src="/static/images/status-conn.png" mode="aspectFit" />
                 </view>
-                <view class="flex flex-col justify-center">
-                  <text class="text-[20rpx] text-[#8C7A70]">连接状态</text>
-                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx]">蓝牙已连接 · 信号极佳</text>
+                <view class="flex flex-col justify-center flex-1 min-w-0">
+                  <text class="text-[20rpx] text-[#8C7A70] truncate block">连接状态</text>
+                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx] truncate block">蓝牙已连接</text>
                 </view>
               </view>
               <!-- 格 2: 剩余电量 -->
-              <view class="bg-[#FAFAFA] rounded-[28rpx] py-[22rpx] px-[20rpx] flex items-center gap-[16rpx]">
+              <view class="bg-[#FAFAFA] rounded-[28rpx] py-[22rpx] px-[20rpx] flex items-center gap-[16rpx] min-w-0">
                 <view class="w-[44rpx] h-[44rpx] flex items-center justify-center shrink-0">
                   <image class="w-[36rpx] h-[36rpx]" src="/static/images/status-battery.png" mode="aspectFit" />
                 </view>
-                <view class="flex flex-col justify-center">
-                  <text class="text-[20rpx] text-[#8C7A70]">剩余电量</text>
-                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx]">88% · 正常守护中</text>
+                <view class="flex flex-col justify-center flex-1 min-w-0">
+                  <text class="text-[20rpx] text-[#8C7A70] truncate block">剩余电量</text>
+                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx] truncate block">88% · 正常守护中</text>
                 </view>
               </view>
               <!-- 格 3: 网络配置 -->
-              <view class="bg-[#FAFAFA] rounded-[28rpx] py-[22rpx] px-[20rpx] flex items-center gap-[16rpx]">
+              <view class="bg-[#FAFAFA] rounded-[28rpx] py-[22rpx] px-[20rpx] flex items-center gap-[16rpx] min-w-0">
                 <view class="w-[44rpx] h-[44rpx] flex items-center justify-center shrink-0">
                   <image class="w-[36rpx] h-[36rpx]" src="/static/images/status-wifi.png" mode="aspectFit" />
                 </view>
-                <view class="flex flex-col justify-center">
-                  <text class="text-[20rpx] text-[#8C7A70]">网络配置</text>
-                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx]">Home_Studio_5G</text>
+                <view class="flex flex-col justify-center flex-1 min-w-0">
+                  <text class="text-[20rpx] text-[#8C7A70] truncate block">网络配置</text>
+                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx] truncate block">Home_Studio_5G</text>
                 </view>
               </view>
               <!-- 格 4: 当前音色 -->
-              <view class="bg-[#FAFAFA] rounded-[28rpx] py-[22rpx] px-[20rpx] flex items-center gap-[16rpx]">
+              <view class="bg-[#FAFAFA] rounded-[28rpx] py-[22rpx] px-[20rpx] flex items-center gap-[16rpx] min-w-0">
                 <view class="w-[44rpx] h-[44rpx] flex items-center justify-center shrink-0">
                   <image class="w-[36rpx] h-[36rpx]" src="/static/images/status-voice.png" mode="aspectFit" />
                 </view>
-                <view class="flex flex-col justify-center">
-                  <text class="text-[20rpx] text-[#8C7A70]">当前音色</text>
-                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx]">温顺小奶犬</text>
+                <view class="flex flex-col justify-center flex-1 min-w-0">
+                  <text class="text-[20rpx] text-[#8C7A70] truncate block">当前音色</text>
+                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx] truncate block">温顺小奶犬</text>
                 </view>
               </view>
             </view>
@@ -191,23 +191,23 @@
 
           <!-- 次级设备卡片 (星星项圈 Lite) -->
           <view class="bg-white rounded-[48rpx] shadow-[0_10rpx_36rpx_rgba(27,27,29,0.03)] flex justify-between items-center py-[24rpx] px-[32rpx]">
-            <view class="flex items-center gap-[20rpx]">
+            <view class="flex items-center gap-[20rpx] flex-1 min-w-0 mr-[16rpx]">
               <view class="w-[88rpx] h-[88rpx] rounded-[32rpx] bg-[#EAE7EA] flex items-center justify-center shrink-0">
                 <image class="w-[40rpx] h-[38rpx]" src="/static/images/device-collar-icon.png" mode="aspectFit" />
               </view>
-              <view class="flex flex-col gap-[8rpx]">
+              <view class="flex flex-col gap-[8rpx] flex-1 min-w-0">
                 <view class="flex items-center gap-[12rpx]">
-                  <text class="text-[30rpx] font-bold text-[#1B1B1D]">星星项圈</text>
-                  <view class="flex items-center justify-center h-[36rpx] bg-[#EFEBE9] px-[14rpx] rounded-[8rpx]">
+                  <text class="text-[30rpx] font-bold text-[#1B1B1D] truncate">星星项圈</text>
+                  <view class="flex items-center justify-center h-[36rpx] bg-[#EFEBE9] px-[14rpx] rounded-[8rpx] shrink-0">
                     <text class="text-[20rpx] font-semibold text-[#554339]">Lite版</text>
                   </view>
                 </view>
-                <text class="text-[22rpx] text-[#554339]">体征温感与低频脉冲</text>
+                <text class="text-[22rpx] text-[#554339] truncate block">体征温感与低频脉冲</text>
               </view>
             </view>
-            <view class="flex flex-col items-end justify-center">
-              <text class="text-[24rpx] font-medium text-[#554339]">休眠待机</text>
-              <text class="text-[20rpx] text-[#8C7A70] mt-[4rpx]">电池 65%</text>
+            <view class="flex flex-col items-end justify-center shrink-0">
+              <text class="text-[24rpx] font-medium text-[#554339] truncate">休眠待机</text>
+              <text class="text-[20rpx] text-[#8C7A70] mt-[4rpx] truncate">电池 65%</text>
             </view>
           </view>
         </view>
