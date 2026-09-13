@@ -3,3 +3,7 @@
 @source "../components/**/*.{html,js,ts,jsx,tsx,vue}";
 @source not "../uni_modules";
 @source not "../unpackage";
+
+.inline-flex {
+  display: inline-flex;
+}

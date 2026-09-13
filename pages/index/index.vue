@@ -27,11 +27,11 @@
           <!-- 顶部信息栏：模型状态 & 在线呼吸指示器 -->
           <view class="flex justify-between items-center mb-[24rpx]">
             <view class="flex items-center gap-[10rpx]">
-              <view class="w-[16rpx] h-[16rpx] bg-[#994703] rotate-45 rounded-[3rpx]"></view>
+              <view class="w-[16rpx] h-[16rpx] bg-[#994703] rotate-45 rounded-[3rpx] shrink-0"></view>
               <text class="text-[24rpx] font-medium text-[#1B1B1D]">3D 拟真模型 · 守护中</text>
             </view>
             <view class="flex items-center gap-[10rpx]">
-              <view class="w-[12rpx] h-[12rpx] rounded-full bg-[#00A389] shadow-[0_0_10rpx_rgba(0,163,137,0.6)]"></view>
+              <view class="w-[12rpx] h-[12rpx] rounded-full bg-[#00A389] shadow-[0_0_10rpx_rgba(0,163,137,0.6)] shrink-0"></view>
               <text class="text-[22rpx] text-[#006A62] font-medium">设备在线 · 呼吸灯同步</text>
             </view>
           </view>
@@ -51,12 +51,12 @@
               <text class="text-[44rpx] font-bold text-[#1B1B1D]">麦麦</text>
               <text class="text-[26rpx] text-[#554339]">Golden Retriever</text>
             </view>
-            <view class="flex items-center gap-[16rpx] align-center">
-              <view class="bg-[#FFEAD9] px-[20rpx] py-[8rpx] rounded-full">
+            <view class="flex items-center gap-[16rpx]">
+              <view class="flex items-center justify-center h-[52rpx] bg-[#FFEAD9] px-[22rpx] rounded-full">
                 <text class="text-[24rpx] font-semibold text-[#994703]">已守护 428 天</text>
               </view>
-              <view class="bg-[#F6F3F5] px-[20rpx] py-[8rpx] rounded-full flex items-center gap-[10rpx]">
-                <view class="w-[12rpx] h-[12rpx] rounded-full bg-[#E24A4A]"></view>
+              <view class="flex items-center justify-center h-[52rpx] bg-[#F6F3F5] px-[22rpx] rounded-full gap-[10rpx]">
+                <view class="w-[12rpx] h-[12rpx] rounded-full bg-[#E24A4A] shrink-0"></view>
                 <text class="text-[24rpx] text-[#554339]">心跳频次 82 bpm</text>
               </view>
             </view>
@@ -65,11 +65,11 @@
           <!-- 互动操作面板 (轻声唤醒、思念之声、抚摸互动) -->
           <view class="mt-[32rpx] bg-[#F6F3F5]/75 rounded-[36rpx] py-[24rpx] px-[16rpx] flex items-center justify-around">
             <!-- 操作项 1: 轻声唤醒 -->
-            <view class="flex flex-col items-center gap-[14rpx] px-[14rpx] py-[10rpx] rounded-[20rpx] transition-colors duration-200" hover-class="bg-white/85" @tap="handleInteraction('唤醒')">
+            <view class="flex flex-col items-center gap-[10rpx] px-[14rpx] py-[10rpx] rounded-[20rpx] transition-colors duration-200" hover-class="bg-white/85" @tap="handleInteraction('唤醒')">
               <view class="w-[72rpx] h-[72rpx] rounded-full bg-[#FFDBC9]/60 flex items-center justify-center shrink-0">
                 <image class="w-[32rpx] h-[32rpx]" src="/static/images/action-wake.png" mode="aspectFit" />
               </view>
-              <view class="flex flex-col">
+              <view class="flex flex-col items-center text-center">
                 <text class="text-[24rpx] font-semibold text-[#1B1B1D]">轻声唤醒</text>
                 <text class="text-[20rpx] text-[#8C7A70] mt-[2rpx]">声波呼吸</text>
               </view>
@@ -78,11 +78,11 @@
             <view class="w-[2rpx] h-[48rpx] bg-[#E8E2E5]"></view>
 
             <!-- 操作项 2: 思念之声 -->
-            <view class="flex flex-col items-center gap-[14rpx] px-[14rpx] py-[10rpx] rounded-[20rpx] transition-colors duration-200" hover-class="bg-white/85" @tap="handleInteraction('思念')">
+            <view class="flex flex-col items-center gap-[10rpx] px-[14rpx] py-[10rpx] rounded-[20rpx] transition-colors duration-200" hover-class="bg-white/85" @tap="handleInteraction('思念')">
               <view class="w-[72rpx] h-[72rpx] rounded-full bg-[#EADDFF]/70 flex items-center justify-center shrink-0">
                 <image class="w-[32rpx] h-[32rpx]" src="/static/images/action-sound.png" mode="aspectFit" />
               </view>
-              <view class="flex flex-col">
+              <view class="flex flex-col items-center text-center">
                 <text class="text-[24rpx] font-semibold text-[#1B1B1D]">思念之声</text>
                 <text class="text-[20rpx] text-[#8C7A70] mt-[2rpx]">回放呼噜声</text>
               </view>
@@ -91,11 +91,11 @@
             <view class="w-[2rpx] h-[48rpx] bg-[#E8E2E5]"></view>
 
             <!-- 操作项 3: 抚摸互动 -->
-            <view class="flex flex-col items-center gap-[14rpx] px-[14rpx] py-[10rpx] rounded-[20rpx] transition-colors duration-200" hover-class="bg-white/85" @tap="handleInteraction('抚摸')">
+            <view class="flex flex-col items-center gap-[10rpx] px-[14rpx] py-[10rpx] rounded-[20rpx] transition-colors duration-200" hover-class="bg-white/85" @tap="handleInteraction('抚摸')">
               <view class="w-[72rpx] h-[72rpx] rounded-full bg-[#FFDBC9]/60 flex items-center justify-center shrink-0">
                 <image class="w-[32rpx] h-[32rpx]" src="/static/images/action-touch.png" mode="aspectFit" />
               </view>
-              <view class="flex flex-col">
+              <view class="flex flex-col items-center text-center">
                 <text class="text-[24rpx] font-semibold text-[#1B1B1D]">抚摸互动</text>
                 <text class="text-[20rpx] text-[#8C7A70] mt-[2rpx]">触觉振颤</text>
               </view>
@@ -108,9 +108,9 @@
           <!-- 标题栏：包含爪印Icon、主标题与嵌入式终端Tag -->
           <view class="flex justify-between items-center px-[4rpx]">
             <view class="flex items-center gap-[14rpx]">
-              <image class="w-[40rpx] h-[38rpx]" src="/static/images/device-section-icon.png" mode="aspectFit" />
+              <image class="w-[40rpx] h-[38rpx] shrink-0" src="/static/images/device-section-icon.png" mode="aspectFit" />
               <text class="text-[36rpx] font-bold text-[#1B1B1D]">我的陪伴设备</text>
-              <view class="bg-[#F6F3F5] px-[16rpx] py-[6rpx] rounded-full">
+              <view class="flex items-center justify-center h-[38rpx] bg-[#F6F3F5] px-[16rpx] rounded-full">
                 <text class="text-[20rpx] text-[#554339]">嵌入式终端</text>
               </view>
             </view>
@@ -128,18 +128,18 @@
                 <view class="w-[88rpx] h-[88rpx] rounded-[32rpx] bg-[#FFDBC9]/50 flex items-center justify-center shrink-0">
                   <image class="w-[44rpx] h-[38rpx]" src="/static/images/device-box-icon.png" mode="aspectFit" />
                 </view>
-                <view class="flex flex-col gap-[6rpx]">
+                <view class="flex flex-col gap-[8rpx]">
                   <view class="flex items-center gap-[12rpx]">
                     <text class="text-[32rpx] font-bold text-[#1B1B1D]">麦麦的数字灵犀盒</text>
-                    <view class="bg-[#FFEAD9] px-[12rpx] py-[4rpx] rounded-[8rpx]">
+                    <view class="flex items-center justify-center h-[36rpx] bg-[#FFEAD9] px-[14rpx] rounded-[8rpx]">
                       <text class="text-[20rpx] font-semibold text-[#994703]">Pro版</text>
                     </view>
                   </view>
                   <text class="text-[22rpx] text-[#554339]">唤醒词「麦麦」· 实时全息渲染</text>
                 </view>
               </view>
-              <view class="bg-[#D7F2EE] px-[18rpx] py-[8rpx] rounded-full flex items-center gap-[10rpx] shrink-0">
-                <view class="w-[12rpx] h-[12rpx] bg-[#006A62] rounded-full"></view>
+              <view class="flex items-center justify-center h-[46rpx] bg-[#D7F2EE] px-[20rpx] rounded-full gap-[10rpx] shrink-0">
+                <view class="w-[12rpx] h-[12rpx] bg-[#006A62] rounded-full shrink-0"></view>
                 <text class="text-[22rpx] font-semibold text-[#006A62]">已连接</text>
               </view>
             </view>
@@ -151,9 +151,9 @@
                 <view class="w-[44rpx] h-[44rpx] flex items-center justify-center shrink-0">
                   <image class="w-[36rpx] h-[36rpx]" src="/static/images/status-conn.png" mode="aspectFit" />
                 </view>
-                <view class="flex flex-col gap-[4rpx]">
+                <view class="flex flex-col justify-center">
                   <text class="text-[20rpx] text-[#8C7A70]">连接状态</text>
-                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] leading-[1.3]">蓝牙已连接 · 信号极佳</text>
+                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx]">蓝牙已连接 · 信号极佳</text>
                 </view>
               </view>
               <!-- 格 2: 剩余电量 -->
@@ -161,9 +161,9 @@
                 <view class="w-[44rpx] h-[44rpx] flex items-center justify-center shrink-0">
                   <image class="w-[36rpx] h-[36rpx]" src="/static/images/status-battery.png" mode="aspectFit" />
                 </view>
-                <view class="flex flex-col gap-[4rpx]">
+                <view class="flex flex-col justify-center">
                   <text class="text-[20rpx] text-[#8C7A70]">剩余电量</text>
-                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] leading-[1.3]">88% · 正常守护中</text>
+                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx]">88% · 正常守护中</text>
                 </view>
               </view>
               <!-- 格 3: 网络配置 -->
@@ -171,9 +171,9 @@
                 <view class="w-[44rpx] h-[44rpx] flex items-center justify-center shrink-0">
                   <image class="w-[36rpx] h-[36rpx]" src="/static/images/status-wifi.png" mode="aspectFit" />
                 </view>
-                <view class="flex flex-col gap-[4rpx]">
+                <view class="flex flex-col justify-center">
                   <text class="text-[20rpx] text-[#8C7A70]">网络配置</text>
-                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] leading-[1.3]">Home_Studio_5G</text>
+                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx]">Home_Studio_5G</text>
                 </view>
               </view>
               <!-- 格 4: 当前音色 -->
@@ -181,9 +181,9 @@
                 <view class="w-[44rpx] h-[44rpx] flex items-center justify-center shrink-0">
                   <image class="w-[36rpx] h-[36rpx]" src="/static/images/status-voice.png" mode="aspectFit" />
                 </view>
-                <view class="flex flex-col gap-[4rpx]">
+                <view class="flex flex-col justify-center">
                   <text class="text-[20rpx] text-[#8C7A70]">当前音色</text>
-                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] leading-[1.3]">温顺小奶犬</text>
+                  <text class="text-[24rpx] font-semibold text-[#1B1B1D] mt-[4rpx]">温顺小奶犬</text>
                 </view>
               </view>
             </view>
@@ -195,19 +195,19 @@
               <view class="w-[88rpx] h-[88rpx] rounded-[32rpx] bg-[#EAE7EA] flex items-center justify-center shrink-0">
                 <image class="w-[40rpx] h-[38rpx]" src="/static/images/device-collar-icon.png" mode="aspectFit" />
               </view>
-              <view class="flex flex-col gap-[6rpx]">
+              <view class="flex flex-col gap-[8rpx]">
                 <view class="flex items-center gap-[12rpx]">
                   <text class="text-[30rpx] font-bold text-[#1B1B1D]">星星项圈</text>
-                  <view class="bg-[#EFEBE9] px-[12rpx] py-[4rpx] rounded-[8rpx]">
+                  <view class="flex items-center justify-center h-[36rpx] bg-[#EFEBE9] px-[14rpx] rounded-[8rpx]">
                     <text class="text-[20rpx] font-semibold text-[#554339]">Lite版</text>
                   </view>
                 </view>
                 <text class="text-[22rpx] text-[#554339]">体征温感与低频脉冲</text>
               </view>
             </view>
-            <view class="flex flex-col items-end gap-[6rpx]">
+            <view class="flex flex-col items-end justify-center">
               <text class="text-[24rpx] font-medium text-[#554339]">休眠待机</text>
-              <text class="text-[20rpx] text-[#8C7A70]">电池 65%</text>
+              <text class="text-[20rpx] text-[#8C7A70] mt-[4rpx]">电池 65%</text>
             </view>
           </view>
         </view>
@@ -217,7 +217,7 @@
           <view class="w-[64rpx] h-[64rpx] bg-white rounded-full flex items-center justify-center shadow-[0_4rpx_12rpx_rgba(0,0,0,0.04)] shrink-0">
             <image class="w-[32rpx] h-[32rpx]" src="/static/images/quote-icon.png" mode="aspectFit" />
           </view>
-          <view class="flex-1 z-[2]">
+          <view class="flex-1 z-[2] flex items-center">
             <text class="text-[24rpx] text-[#1B1B1D] leading-[1.6]">爱的形态在数字星球延续，每次呼唤皆有回响。</text>
           </view>
           <view class="absolute -right-[20rpx] -bottom-[20rpx] w-[140rpx] h-[140rpx] bg-[#FFDBC9]/35 rounded-full blur-[24rpx]"></view>
