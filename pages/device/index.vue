@@ -391,35 +391,20 @@ const handleRefreshScan = () => {
 
 // 连接设备
 const handleConnect = async (device) => {
-  if (device.connected) {
-    uni.showModal({
-      title: '提示',
-      content: `是否断开与 ${getDeviceDisplayName(device)} 的连接？`,
-      success: async (res) => {
-        if (res.confirm) {
-          try {
-            await closeBLEConnection(device.deviceId);
-          } finally {
-            device.connected = false;
-            uni.showToast({ title: '已断开连接', icon: 'none' });
-          }
-        }
-      }
-    });
-    return;
-  }
-
   connectingDevice.value = device.deviceId;
   uni.showLoading({
     title: `正在连接...`
   });
-
   try {
     await createBLEConnection(device.deviceId, 10000);
     device.connected = true;
     uni.showToast({
       title: '连接成功',
       icon: 'success'
+    });
+    const name = encodeURIComponent(getDeviceDisplayName(device));
+    uni.navigateTo({
+      url: `/pages/device/config?deviceId=${device.deviceId}&name=${name}`
     });
   } catch (err) {
     console.warn('BLE 连接失败:', err);
@@ -428,6 +413,10 @@ const handleConnect = async (device) => {
     uni.showToast({
       title: '连接成功',
       icon: 'success'
+    });
+    const name = encodeURIComponent(getDeviceDisplayName(device));
+    uni.navigateTo({
+      url: `/pages/device/config?deviceId=${device.deviceId}&name=${name}`
     });
   } finally {
     uni.hideLoading();
@@ -452,6 +441,16 @@ const handleOpenGuide = () => {
 };
 
 onShow(() => {
+  // 检查是否从配置页返回断开了蓝牙设备
+  const disconnectedDeviceId = uni.getStorageSync('ble_disconnected_device_id');
+  if (disconnectedDeviceId) {
+    uni.removeStorageSync('ble_disconnected_device_id');
+    const target = deviceList.value.find(d => d.deviceId === disconnectedDeviceId);
+    if (target) {
+      target.connected = false;
+    }
+  }
+
   const autoScan = uni.getStorageSync('auto_scan_device');
   if (autoScan) {
     uni.removeStorageSync('auto_scan_device');
