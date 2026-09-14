@@ -7,12 +7,6 @@
         <view class="flex items-center">
           <text class="text-[38rpx] font-bold text-[#1B1B1D] tracking-[-0.5rpx]">Guardian Home</text>
         </view>
-        <!-- 头部右侧操作区（铃铛按钮，已预留小程序胶囊位置） -->
-        <view class="flex items-center">
-          <view class="w-[64rpx] h-[64rpx] rounded-full bg-[#994703] flex items-center justify-center shadow-[0_4rpx_14rpx_rgba(153,71,3,0.28)] transition-opacity duration-150" hover-class="opacity-85" @tap="handleNoticeTap">
-            <image class="w-[28rpx] h-[28rpx]" src="/static/images/bell-icon.png" mode="aspectFit" />
-          </view>
-        </view>
       </view>
     </view>
 
@@ -24,17 +18,6 @@
       <view class="px-[32rpx] pt-[20rpx] pb-[60rpx] flex flex-col gap-[32rpx]">
         <!-- 卡片 1: 宠物实时守护状态卡片 -->
         <view class="bg-white rounded-[48rpx] p-[32rpx] pb-[28rpx] shadow-[0_12rpx_40rpx_rgba(27,27,29,0.04)] flex flex-col relative">
-          <!-- 顶部信息栏：模型状态 & 在线呼吸指示器 -->
-          <view class="flex justify-between items-center mb-[24rpx]">
-            <view class="flex items-center gap-[10rpx]">
-              <view class="w-[16rpx] h-[16rpx] bg-[#994703] rotate-45 rounded-[3rpx] shrink-0"></view>
-              <text class="text-[24rpx] font-medium text-[#1B1B1D]">3D 拟真模型 · 守护中</text>
-            </view>
-            <view class="flex items-center gap-[10rpx]">
-              <view class="w-[12rpx] h-[12rpx] rounded-full bg-[#00A389] shadow-[0_0_10rpx_rgba(0,163,137,0.6)] shrink-0"></view>
-              <text class="text-[22rpx] text-[#006A62] font-medium">设备在线 · 呼吸灯同步</text>
-            </view>
-          </view>
 
           <!-- 3D/宠物拟真模型展示区域 (完整设计：渐变底色+金毛萌宠+底部拟态浮层状态胶囊) -->
           <view class="w-full flex justify-center items-center mb-[20rpx]">
@@ -267,10 +250,8 @@ const handleInteraction = (type) => {
 };
 
 const handleAddDevice = () => {
-  uni.showToast({
-    title: '正在搜索附近设备...',
-    icon: 'none'
-  });
+  uni.setStorageSync('auto_scan_device', true);
+  uni.switchTab({ url: '/pages/device/index' });
 };
 
 const handleNoticeTap = () => {

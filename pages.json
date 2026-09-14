@@ -11,13 +11,25 @@
 		{
 			"path": "pages/device/index",
 			"style": {
-				"navigationBarTitleText": "设备"
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "Device Hub",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
 			"path": "pages/my/index",
 			"style": {
-				"navigationBarTitleText": "我的"
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/device/config",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "配置中心",
+				"enablePullDownRefresh": false
 			}
 		}
 	],
