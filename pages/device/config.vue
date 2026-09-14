@@ -35,7 +35,7 @@
             <view class="flex items-center gap-[8px]">
               <!-- 设备主图标 -->
               <view class="w-[40px] h-[40px] rounded-full bg-[#FFDBC9] flex items-center justify-center flex-shrink-0">
-                <image class="w-[16px] h-[18px]" src="/static/icons/config-device-orb.svg" mode="aspectFit" />
+                <image class="w-[18px] h-[18px]" src="/static/icons/config-device-orb.svg" mode="aspectFit" />
               </view>
               <view class="flex flex-col">
                 <view class="flex items-center gap-[4px]">
@@ -50,7 +50,7 @@
 
             <!-- 信号指示徽标 -->
             <view class="w-[40px] h-[40px] rounded-full bg-[#F0EDEF] flex items-center justify-center flex-shrink-0">
-              <image class="w-[17px] h-[12px]" src="/static/icons/config-signal-pill.svg" mode="aspectFit" />
+              <image class="w-[18px] h-[18px]" src="/static/icons/config-signal-pill.svg" mode="aspectFit" />
             </view>
           </view>
         </view>
@@ -64,7 +64,7 @@
             <view class="flex items-center justify-between">
               <view class="flex items-center gap-[8px]">
                 <view class="w-[32px] h-[32px] rounded-full bg-[#FFDBC9] flex items-center justify-center flex-shrink-0">
-                  <image class="w-[15px] h-[14px]" src="/static/icons/config-paw-header.svg" mode="aspectFit" />
+                  <image class="w-[18px] h-[18px]" src="/static/icons/config-paw-header.svg" mode="aspectFit" />
                 </view>
                 <view class="flex flex-col">
                   <text class="text-[18px] leading-[24px] font-medium text-[#1B1B1D]">宠物信息与唤醒词</text>
@@ -72,7 +72,7 @@
                 </view>
               </view>
               <view class="h-[16px] px-[8px] py-[2px] rounded-full bg-[#F0EDEF] flex items-center gap-[4px]">
-                <image class="w-[7px] h-[10px]" src="/static/icons/config-offline-wake.svg" mode="aspectFit" />
+                <image class="w-[10px] h-[10px]" src="/static/icons/config-offline-wake.svg" mode="aspectFit" />
                 <text class="text-[10px] leading-[12px] font-medium text-[#006A62]">离线唤醒</text>
               </view>
             </view>
@@ -102,8 +102,8 @@
 
             <!-- 唤醒提示条 (Figma 13:307: p:8px, gap:4px, bg-[#F6F3F5]) -->
             <view class="w-full p-[8px] rounded-[12px] bg-[#F6F3F5] flex items-start gap-[4px] box-border">
-              <view class="w-[16px] pt-[2px] flex items-center justify-center flex-shrink-0">
-                <image class="w-[16px] h-[15px]" src="/static/icons/config-speech-info.svg" mode="aspectFit" />
+              <view class="w-[16px] h-[16px] pt-[2px] flex items-center justify-center flex-shrink-0">
+                <image class="w-[16px] h-[16px]" src="/static/icons/config-speech-info.svg" mode="aspectFit" />
               </view>
               <text class="text-[13px] leading-[18px] text-[#554339] flex-1">
                 对着设备喊出 “{{ petName || '麦麦' }}” 即可唤醒互动、触发抓拍与声学健康检测。
@@ -117,7 +117,7 @@
             <view class="flex items-center justify-between">
               <view class="flex items-center gap-[8px]">
                 <view class="w-[32px] h-[32px] rounded-full bg-[#EADDFF] flex items-center justify-center flex-shrink-0">
-                  <image class="w-[12px] h-[15px]" src="/static/icons/config-audio-dac.svg" mode="aspectFit" />
+                  <image class="w-[18px] h-[18px]" src="/static/icons/config-audio-dac.svg" mode="aspectFit" />
                 </view>
                 <view class="flex flex-col">
                   <text class="text-[18px] leading-[24px] font-medium text-[#1B1B1D]">声音与音色选择</text>
@@ -175,7 +175,7 @@
                   class="w-[44px] h-[44px] rounded-full bg-[#FFDBC9] flex items-center justify-center flex-shrink-0 cursor-pointer active:scale-95 transition-transform"
                   @tap="toggleAudioPlay"
                 >
-                  <image class="w-[11px] h-[14px]" src="/static/icons/config-audio-play.svg" mode="aspectFit" />
+                  <image class="w-[14px] h-[14px]" src="/static/icons/config-audio-play.svg" mode="aspectFit" />
                 </view>
 
                 <!-- 音频信息与波形条 -->
@@ -209,14 +209,14 @@
                   class="flex-1 h-[36px] rounded-full bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center gap-[6px] cursor-pointer active:bg-[#FAF6F3]"
                   @tap="handleRecordVoice"
                 >
-                  <image class="w-[9px] h-[13px]" src="/static/icons/config-audio-record.svg" mode="aspectFit" />
+                  <image class="w-[14px] h-[14px]" src="/static/icons/config-audio-record.svg" mode="aspectFit" />
                   <text class="text-[12px] leading-[16px] font-medium text-[#1B1B1D]">重新录制</text>
                 </view>
                 <view
                   class="flex-1 h-[36px] rounded-full bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center gap-[6px] cursor-pointer active:bg-[#FAF6F3]"
                   @tap="handlePickVoice"
                 >
-                  <image class="w-[14px] h-[11px]" src="/static/icons/config-audio-folder.svg" mode="aspectFit" />
+                  <image class="w-[14px] h-[14px]" src="/static/icons/config-audio-folder.svg" mode="aspectFit" />
                   <text class="text-[12px] leading-[16px] font-medium text-[#1B1B1D]">微信音频选取</text>
                 </view>
               </view>
@@ -229,7 +229,7 @@
             <view class="flex items-center justify-between">
               <view class="flex items-center gap-[8px]">
                 <view class="w-[32px] h-[32px] rounded-full bg-[#98F3E7] flex items-center justify-center flex-shrink-0">
-                  <image class="w-[18px] h-[13px]" src="/static/icons/config-wifi-header.svg" mode="aspectFit" />
+                  <image class="w-[18px] h-[18px]" src="/static/icons/config-wifi-header.svg" mode="aspectFit" />
                 </view>
                 <view class="flex flex-col">
                   <text class="text-[18px] leading-[24px] font-semibold text-[#1B1B1D]">Wi-Fi 网络配网</text>
@@ -254,7 +254,7 @@
                 @tap="handleSelectWifi"
               >
                 <view class="flex items-center gap-[8px]">
-                  <image class="w-[17px] h-[14px]" src="/static/icons/config-wifi-router.svg" mode="aspectFit" />
+                  <image class="w-[16px] h-[16px]" src="/static/icons/config-wifi-router.svg" mode="aspectFit" />
                   <view class="flex flex-col">
                     <text class="text-[14px] leading-[18px] font-semibold text-[#1B1B1D]">{{ selectedSsid }}</text>
                     <text class="text-[10px] leading-[12px] font-semibold text-[#006A62]">5GHz · WPA3加密 · 信号强</text>
@@ -280,7 +280,7 @@
                   @tap="showPassword = !showPassword"
                 >
                   <image
-                    class="w-[18px] h-[16px] transition-opacity"
+                    class="w-[18px] h-[18px] transition-opacity"
                     :class="showPassword ? 'opacity-100' : 'opacity-40'"
                     src="/static/icons/config-password-eye.svg"
                     mode="aspectFit"

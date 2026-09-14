@@ -78,6 +78,7 @@
             hover-class="opacity-70"
             @tap="handleRefreshScan"
           >
+          <view @tap="toConfig">to config</view>
             <image
               class="w-[24rpx] h-[24rpx]"
               :class="{ 'animate-spin': isScanning }"
@@ -309,6 +310,9 @@ const deviceList = ref([]);
 // 扫描定时器
 let scanTimer = null;
 
+const toConfig = ()=>{
+  uni.navigateTo({ url: '/pages/device/config' })
+}
 // 设备追加与更新
 const handleFoundDevices = (newDevices) => {
   deviceList.value = mergeDeviceList(deviceList.value, newDevices);
