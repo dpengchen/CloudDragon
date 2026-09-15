@@ -1,16 +1,23 @@
 <template>
   <view class="min-h-screen bg-[#FCF8FB] flex flex-col box-border">
-    <!-- 顶部自定义导航栏 (适配安全区域与沉浸式毛玻璃，与首页高度一致) -->
+    <!-- 顶部自定义导航栏 (适配安全区域与沉浸式毛玻璃，带有返回按钮) -->
     <view
       class="fixed top-0 left-0 right-0 z-[999] bg-[#FCF8FB]/95 backdrop-blur-[16px] flex flex-col"
       :style="{ paddingTop: statusBarHeight + 'px' }"
     >
       <view
-        class="w-full flex items-center justify-between box-border pl-[36rpx]"
+        class="w-full flex items-center box-border pl-[24rpx]"
         :style="{ height: navBarContentHeight + 'px', paddingRight: capsuleMarginRight + 'px' }"
       >
-        <view class="flex items-center">
-          <text class="text-[38rpx] font-bold text-[#1B1B1D] tracking-[-0.5rpx]">Device Hub</text>
+        <!-- 返回按钮与页面标题 -->
+        <view class="flex items-center gap-[8rpx]">
+          <view
+            class="w-[48rpx] h-[48rpx] flex items-center justify-center cursor-pointer active:opacity-60 transition-opacity"
+            @tap="handleBack"
+          >
+            <image class="w-[20rpx] h-[34rpx]" src="/static/icons/config-back.svg" mode="aspectFit" />
+          </view>
+          <text class="text-[38rpx] font-bold text-[#1B1B1D] tracking-[-0.5rpx]">设备中心</text>
         </view>
       </view>
     </view>
@@ -78,7 +85,6 @@
             hover-class="opacity-70"
             @tap="handleRefreshScan"
           >
-          <view @tap="toConfig">to config</view>
             <image
               class="w-[24rpx] h-[24rpx]"
               :class="{ 'animate-spin': isScanning }"
@@ -310,9 +316,18 @@ const deviceList = ref([]);
 // 扫描定时器
 let scanTimer = null;
 
-const toConfig = ()=>{
-  uni.navigateTo({ url: '/pages/device/config' })
-}
+// 返回上一页（若无上一页则返回首页）
+const handleBack = () => {
+  uni.navigateBack({
+    fail: () => {
+      uni.switchTab({ url: '/pages/index/index' });
+    }
+  });
+};
+
+const toConfig = () => {
+  uni.navigateTo({ url: '/pages/device/config' });
+};
 // 设备追加与更新
 const handleFoundDevices = (newDevices) => {
   deviceList.value = mergeDeviceList(deviceList.value, newDevices);

@@ -5,7 +5,7 @@
       <view class="w-full flex items-center justify-between box-border pl-[36rpx]" :style="{ height: navBarContentHeight + 'px', paddingRight: capsuleMarginRight + 'px' }">
         <!-- 页面主标题 -->
         <view class="flex items-center">
-          <text class="text-[38rpx] font-bold text-[#1B1B1D] tracking-[-0.5rpx]">Guardian Home</text>
+          <text class="text-[38rpx] font-bold text-[#1B1B1D] tracking-[-0.5rpx]">宠物守护</text>
         </view>
       </view>
     </view>
@@ -29,7 +29,7 @@
           </view>
 
           <!-- 宠物名称、品种、守护天数 -->
-          <view class="mt-[12rpx] flex flex-col gap-[16rpx]">
+          <view class="mt-[12rpx] flex flex-col gap-[16rpx] items-center">
             <view class="flex items-baseline gap-[16rpx]">
               <text class="text-[44rpx] font-bold text-[#1B1B1D]">麦麦</text>
               <text class="text-[26rpx] text-[#554339]">Golden Retriever</text>
@@ -251,7 +251,7 @@ const handleInteraction = (type) => {
 
 const handleAddDevice = () => {
   uni.setStorageSync('auto_scan_device', true);
-  uni.switchTab({ url: '/pages/device/index' });
+  uni.navigateTo({ url: '/pages/device/index' });
 };
 
 const handleNoticeTap = () => {

@@ -10,7 +10,7 @@
         :style="{ height: navBarContentHeight + 'px', paddingRight: capsuleMarginRight + 'px' }"
       >
         <view class="flex items-center">
-          <text class="text-[38rpx] font-bold text-[#1B1B1D] tracking-[-0.5rpx]">Pet Profile</text>
+          <text class="text-[38rpx] font-bold text-[#1B1B1D] tracking-[-0.5rpx]">个人中心</text>
         </view>
       </view>
     </view>
@@ -68,10 +68,10 @@
           <!-- 指标 1 -->
           <view class="flex-1 flex flex-col items-center justify-center py-[8rpx] rounded-[16rpx]">
             <view class="flex items-baseline">
-              <text class="text-[44rpx] font-bold text-[#2A201A] font-sans leading-none">428</text>
-              <text class="text-[22rpx] font-medium text-[#887367] ml-[4rpx] leading-none">天</text>
+              <text class="text-[44rpx] font-bold text-[#2A201A] font-sans leading-none">3</text>
+              <text class="text-[22rpx] font-medium text-[#887367] ml-[4rpx] leading-none">宠</text>
             </view>
-            <text class="text-[22rpx] text-[#887367] mt-[8rpx] leading-none">已纪念守护</text>
+            <text class="text-[22rpx] text-[#887367] mt-[8rpx] leading-none">我的爱宠</text>
           </view>
 
           <view class="w-[1rpx] h-[48rpx] bg-[#F0EAE4]"></view>
@@ -83,10 +83,10 @@
             @tap="handleMemoryLibrary"
           >
             <view class="flex items-baseline">
-              <text class="text-[44rpx] font-bold text-[#2A201A] font-sans leading-none">1,280</text>
-              <text class="text-[22rpx] font-medium text-[#887367] ml-[4rpx] leading-none">条</text>
+              <text class="text-[44rpx] font-bold text-[#2A201A] font-sans leading-none">5</text>
+              <text class="text-[22rpx] font-medium text-[#887367] ml-[4rpx] leading-none">台</text>
             </view>
-            <text class="text-[22rpx] text-[#887367] mt-[8rpx] leading-none">云端记忆库</text>
+            <text class="text-[22rpx] text-[#887367] mt-[8rpx] leading-none">已绑定设备</text>
           </view>
 
           <view class="w-[1rpx] h-[48rpx] bg-[#F0EAE4]"></view>
@@ -99,9 +99,9 @@
           >
             <view class="flex items-baseline">
               <text class="text-[44rpx] font-bold text-[#2A201A] font-sans leading-none">2</text>
-              <text class="text-[22rpx] font-medium text-[#887367] ml-[4rpx] leading-none">台</text>
+              <text class="text-[22rpx] font-medium text-[#887367] ml-[4rpx] leading-none">条</text>
             </view>
-            <text class="text-[22rpx] text-[#887367] mt-[8rpx] leading-none">已绑定设备</text>
+            <text class="text-[22rpx] text-[#887367] mt-[8rpx] leading-none">自定义音色</text>
           </view>
         </view>
 
@@ -156,76 +156,6 @@
             </view>
           </view>
 
-          <!-- 分组 2: 硬件与物联网管理 -->
-          <view class="flex flex-col gap-[14rpx]">
-            <view class="flex items-center justify-between px-[8rpx]">
-              <text class="text-[24rpx] font-semibold text-[#887367] tracking-[0.5rpx]">硬件与物联网管理</text>
-            </view>
-            <view class="bg-white rounded-[24rpx] shadow-[0_2rpx_8rpx_rgba(0,0,0,0.03)] overflow-hidden">
-              <!-- Item 1: 固件无线升级 (OTA) -->
-              <view
-                class="flex items-center py-[26rpx] px-[28rpx] transition-colors duration-150"
-                hover-class="bg-[#FAF5F2]"
-                @tap="handleOTA"
-              >
-                <view class="w-[64rpx] h-[64rpx] rounded-[16rpx] bg-[#994703]/10 flex items-center justify-center shrink-0">
-                  <image class="w-[36rpx] h-[36rpx]" src="/static/icons/my-ota.svg" mode="aspectFit" />
-                </view>
-                <view class="flex-1 ml-[24rpx] flex flex-col gap-[4rpx]">
-                  <text class="text-[30rpx] font-medium text-[#2A201A]">固件无线升级 (OTA)</text>
-                  <text class="text-[22rpx] text-[#887367] leading-[1.3]">伴侣设备感知核心</text>
-                </view>
-                <view class="flex items-center gap-[12rpx]">
-                  <view class="inline-flex items-center justify-center h-[40rpx] px-[18rpx] rounded-full bg-[#994703] box-border">
-                    <text class="text-[20rpx] font-semibold text-white leading-none text-center">v2.4.0 新音色</text>
-                  </view>
-                  <image class="w-[14rpx] h-[20rpx] shrink-0 opacity-60" src="/static/icons/my-arrow-right.svg" mode="aspectFit" />
-                </view>
-              </view>
-
-              <view class="h-[1rpx] bg-[#F5EFEB] ml-[116rpx]"></view>
-
-              <!-- Item 2: Wi-Fi 局域网同步设置 -->
-              <view
-                class="flex items-center py-[26rpx] px-[28rpx] transition-colors duration-150"
-                hover-class="bg-[#FAF5F2]"
-                @tap="handleWifiSettings"
-              >
-                <view class="w-[64rpx] h-[64rpx] rounded-[16rpx] bg-[#006A62]/10 flex items-center justify-center shrink-0">
-                  <image class="w-[36rpx] h-[36rpx]" src="/static/icons/my-wifi.svg" mode="aspectFit" />
-                </view>
-                <view class="flex-1 ml-[24rpx] flex flex-col gap-[4rpx]">
-                  <text class="text-[30rpx] font-medium text-[#2A201A]">Wi-Fi 局域网同步设置</text>
-                  <text class="text-[22rpx] text-[#887367] leading-[1.3]">当前已连接: StarHome-5G</text>
-                </view>
-                <image class="w-[14rpx] h-[20rpx] shrink-0 opacity-60" src="/static/icons/my-arrow-right.svg" mode="aspectFit" />
-              </view>
-
-              <view class="h-[1rpx] bg-[#F5EFEB] ml-[116rpx]"></view>
-
-              <!-- Item 3: 离线语音唤醒灵敏度 -->
-              <view class="flex items-center py-[26rpx] px-[28rpx]">
-                <view class="w-[64rpx] h-[64rpx] rounded-[16rpx] bg-[#E4E2E4] flex items-center justify-center shrink-0">
-                  <image class="w-[36rpx] h-[36rpx]" src="/static/icons/my-mic.svg" mode="aspectFit" />
-                </view>
-                <view class="flex-1 ml-[24rpx] flex flex-col gap-[4rpx]">
-                  <text class="text-[30rpx] font-medium text-[#2A201A]">离线语音唤醒灵敏度</text>
-                  <text class="text-[22rpx] text-[#887367] leading-[1.3]">轻声轻语即可呼唤</text>
-                </view>
-                <!-- iOS 风格交互开关 -->
-                <view
-                  class="w-[96rpx] h-[56rpx] rounded-full p-[4rpx] transition-colors duration-200 relative box-border cursor-pointer"
-                  :class="voiceWakeupEnabled ? 'bg-[#994703]' : 'bg-[#E4E2E4]'"
-                  @tap="toggleVoiceWakeup"
-                >
-                  <view
-                    class="w-[48rpx] h-[48rpx] rounded-full bg-white shadow-[0_2rpx_6rpx_rgba(0,0,0,0.15)] transition-transform duration-200 block"
-                    :class="voiceWakeupEnabled ? 'translate-x-[40rpx]' : 'translate-x-0'"
-                  ></view>
-                </view>
-              </view>
-            </view>
-          </view>
 
           <!-- 分组 3: 声音与记忆备份 -->
           <view class="flex flex-col gap-[14rpx]">
@@ -254,21 +184,6 @@
 
               <view class="h-[1rpx] bg-[#F5EFEB] ml-[116rpx]"></view>
 
-              <!-- Item 2: iCloud / 微信云端加密备份 -->
-              <view
-                class="flex items-center py-[26rpx] px-[28rpx] transition-colors duration-150"
-                hover-class="bg-[#FAF5F2]"
-                @tap="handleCloudBackup"
-              >
-                <view class="w-[64rpx] h-[64rpx] rounded-[16rpx] bg-[#EADDFF] flex items-center justify-center shrink-0">
-                  <image class="w-[36rpx] h-[36rpx]" src="/static/icons/my-cloud-backup.svg" mode="aspectFit" />
-                </view>
-                <view class="flex-1 ml-[24rpx] flex flex-col gap-[4rpx]">
-                  <text class="text-[30rpx] font-medium text-[#2A201A]">iCloud / 微信云端加密备份</text>
-                  <text class="text-[22rpx] text-[#887367] leading-[1.3]">端到端生物级双重密钥加密</text>
-                </view>
-                <image class="w-[14rpx] h-[20rpx] shrink-0 opacity-60" src="/static/icons/my-arrow-right.svg" mode="aspectFit" />
-              </view>
             </view>
           </view>
 
@@ -351,21 +266,6 @@ onMounted(() => {
   capsuleMarginRight.value = metrics.capsuleMarginRight;
 });
 
-// 离线语音唤醒灵敏度开关状态
-const voiceWakeupEnabled = ref(true);
-
-const toggleVoiceWakeup = () => {
-  voiceWakeupEnabled.value = !voiceWakeupEnabled.value;
-  try {
-    uni.vibrateShort();
-  } catch (e) {
-    // 忽略振动不支持
-  }
-  uni.showToast({
-    title: voiceWakeupEnabled.value ? '已开启高灵敏呼唤' : '已关闭离线唤醒',
-    icon: 'none'
-  });
-};
 
 // 跳转已绑定设备列表
 const handleDeviceNav = () => {
@@ -382,12 +282,6 @@ const handleEditProfile = () => {
   });
 };
 
-const handleOpenSettings = () => {
-  uni.showToast({
-    title: '系统偏好设置',
-    icon: 'none'
-  });
-};
 
 const handleMemoryLibrary = () => {
   uni.showToast({
@@ -416,33 +310,10 @@ const handle3DEngine = () => {
   });
 };
 
-const handleOTA = () => {
-  uni.showModal({
-    title: '固件更新 (OTA)',
-    content: '当前伴侣设备感知核心已同步至最新版 (v2.4.0 新音色)，包含拟真呼吸与柔和低语声线。',
-    showCancel: false,
-    confirmText: '已知晓',
-    confirmColor: '#994703'
-  });
-};
-
-const handleWifiSettings = () => {
-  uni.showToast({
-    title: '当前 Wi-Fi: StarHome-5G (已加密传输)',
-    icon: 'none'
-  });
-};
 
 const handleVoiceLab = () => {
   uni.showToast({
     title: 'AI 宠物原声音色拟合度：98%',
-    icon: 'none'
-  });
-};
-
-const handleCloudBackup = () => {
-  uni.showToast({
-    title: '端到端加密备份已就绪',
     icon: 'none'
   });
 };

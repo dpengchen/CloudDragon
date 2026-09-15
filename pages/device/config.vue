@@ -50,7 +50,7 @@
 
             <!-- 信号指示徽标 -->
             <view class="w-[40px] h-[40px] rounded-full bg-[#F0EDEF] flex items-center justify-center flex-shrink-0">
-              <image class="w-[18px] h-[18px]" src="/static/icons/config-signal-pill.svg" mode="aspectFit" />
+              <image class="w-[36px] h-[36px]" src="/static/icons/config-signal-pill.svg" mode="aspectFit" />
             </view>
           </view>
         </view>
@@ -175,7 +175,7 @@
                   class="w-[44px] h-[44px] rounded-full bg-[#FFDBC9] flex items-center justify-center flex-shrink-0 cursor-pointer active:scale-95 transition-transform"
                   @tap="toggleAudioPlay"
                 >
-                  <image class="w-[14px] h-[14px]" src="/static/icons/config-audio-play.svg" mode="aspectFit" />
+                  <image class="w-[24px] h-[24px]" src="/static/icons/config-audio-play.svg" mode="aspectFit" />
                 </view>
 
                 <!-- 音频信息与波形条 -->
@@ -254,7 +254,7 @@
                 @tap="handleSelectWifi"
               >
                 <view class="flex items-center gap-[8px]">
-                  <image class="w-[16px] h-[16px]" src="/static/icons/config-wifi-router.svg" mode="aspectFit" />
+                  <image class="w-[18px] h-[18px]" src="/static/icons/config-wifi-router.svg" mode="aspectFit" />
                   <view class="flex flex-col">
                     <text class="text-[14px] leading-[18px] font-semibold text-[#1B1B1D]">{{ selectedSsid }}</text>
                     <text class="text-[10px] leading-[12px] font-semibold text-[#006A62]">5GHz · WPA3加密 · 信号强</text>
@@ -269,7 +269,7 @@
               <text class="text-[12px] leading-[16px] font-medium text-[#554339]">Wi-Fi 密码</text>
               <view class="relative w-full h-[45px]">
                 <input
-                  class="w-full h-[45px] px-[16px] pr-[48px] py-[12px] rounded-[12px] bg-[#F6F3F5] text-[15px] leading-[21px] text-[#1B1B1D] box-border"
+                  class="w-full h-[45px] px-[16px] pr-[48px] py-[12px] rounded-[12px] bg-[#F6F3F5] text-[15px] text-[#1B1B1D] box-border"
                   :password="!showPassword"
                   v-model="wifiPassword"
                   placeholder="momo2024paws"
@@ -400,7 +400,12 @@ const handleBack = async () => {
   await disconnectBLEOnExit();
   uni.navigateBack({
     fail: () => {
-      uni.switchTab({ url: '/pages/device/index' });
+      uni.redirectTo({
+        url: '/pages/device/index',
+        fail: () => {
+          uni.switchTab({ url: '/pages/index/index' });
+        }
+      });
     }
   });
 };

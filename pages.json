@@ -4,7 +4,7 @@
 			"path": "pages/index/index",
 			"style": {
 				"navigationStyle": "custom",
-				"navigationBarTitleText": "Guardian Home",
+				"navigationBarTitleText": "宠物守护",
 				"enablePullDownRefresh": false
 			}
 		},
@@ -12,7 +12,7 @@
 			"path": "pages/device/index",
 			"style": {
 				"navigationStyle": "custom",
-				"navigationBarTitleText": "Device Hub",
+				"navigationBarTitleText": "设备中心",
 				"enablePullDownRefresh": false
 			}
 		},
@@ -53,12 +53,12 @@
 				"selectedIconPath": "static/tabbar/guard-active.png",
 				"text": "守护"
 			},
-			{
-				"pagePath": "pages/device/index",
-				"iconPath": "static/tabbar/device.png",
-				"selectedIconPath": "static/tabbar/device-active.png",
-				"text": "设备"
-			},
+			// {
+			// 	"pagePath": "pages/device/index",
+			// 	"iconPath": "static/tabbar/device.png",
+			// 	"selectedIconPath": "static/tabbar/device-active.png",
+			// 	"text": "设备"
+			// },
 			{
 				"pagePath": "pages/my/index",
 				"iconPath": "static/tabbar/my.png",
